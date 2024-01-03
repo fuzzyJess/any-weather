@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 10,
+    "lat": 10
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 305.7,
+    "feels_like": 303.37,
+    "temp_min": 305.7,
+    "temp_max": 305.7,
+    "pressure": 1011,
+    "humidity": 12,
+    "sea_level": 1011,
+    "grnd_level": 955
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 2.83,
+    "deg": 42,
+    "gust": 2.92
+  },
+  "clouds": {
+    "all": 21
+  },
+  "dt": 1704211065,
+  "sys": {
+    "country": "NG",
+    "sunrise": 1704173821,
+    "sunset": 1704215405
+  },
+  "timezone": 3600,
+  "id": 2347078,
+  "name": "Birim",
+  "cod": 200
+}
