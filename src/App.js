@@ -8,6 +8,7 @@ import petrichor from "./img/petrichor.jpeg"
 import wind from "./img/wind.jpeg"
 import snow from "./img/snow.jpeg"
 import { InfoDisplay } from './info_display/info_display';
+import { Picker } from "./info_display/picker"
 
 function App() {
   // const data = getWeatherDetails(10, 10)
@@ -45,6 +46,7 @@ function App() {
   return (
     <div className='AnyWeather-App' style={{backgroundImage: `url(${background})`}}>
     <InfoDisplay weather = {weatherCondition} day={today}/>
+    <Picker/>
     </div>
   )
 }
