@@ -4,6 +4,9 @@ import getWeatherDetails from "./APITools.js"
 import fewCloudsImage from "./icons/few-clouds.png"
 import aricity from "./img/aricity.webp"
 import cloudy from "./img/cloudy.jpeg"
+import petrichor from "./img/petrichor.jpeg"
+import wind from "./img/wind.jpeg"
+import snow from "./img/snow.jpeg"
 import { InfoDisplay } from './info_display/info_display';
 
 function App() {
@@ -31,16 +34,16 @@ function App() {
   const date = new Date()
   const today = daysOfWeek[date.getDay()]
   const reportBackgrounds = {
-    "Petrichor": "./img/petrichor.jpeg",
-    "Snowmagedden" : "./img/snow.jpeg",
-    "Apricity" : "./img/aricity.webp",
+    "Petrichor": petrichor,
+    "Snowmagedden" : snow,
+    "Apricity" : aricity,
     "Beclouded" : cloudy,
-    "Susurrous" : "./img/wind.jpeg" 
+    "Susurrous" : wind 
   }
   const background = reportBackgrounds[weatherCondition]
   const latLonText = `Lat: ${sampleWeatherData.coord.lat} • Lon: ${sampleWeatherData.coord.lon}`;
   return (
-    <div className='AnyWeather-App' style={{backgroundImage: `url(${cloudy})`}}>
+    <div className='AnyWeather-App' style={{backgroundImage: `url(${background})`}}>
     <InfoDisplay weather = {weatherCondition} day={today}/>
     </div>
   )
