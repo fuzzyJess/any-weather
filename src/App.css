@@ -3,7 +3,7 @@
 }
 
 .AnyWeather-App {
-  background-color: #4e5563;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,4 +32,22 @@
 }
 .align-left {
   float: left;
+}
+
+.horizontal-view {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.horizontal-view p {
+  font-size: xx-large;
+}
+
+.widget {
+  background-color: rgba(52, 167, 229, 0.5);
+  padding: 3rem;
+  border-radius: 25%;
+  box-shadow: black;
 }

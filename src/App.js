@@ -1,9 +1,10 @@
-import "./App.css";
-import sampleWeatherData from "./data/weatherData.json";
-import getWeatherDetails from "./APITools.js";
-import fewCloudsImage from "./icons/few-clouds.png";
+import './App.css';
+import sampleWeatherData from "./data/weatherData.json"
+import getWeatherDetails from "./APITools.js"
+import fewCloudsImage from "./icons/few-clouds.png"
+import { InfoDisplay } from './info_display/info_display';
 
-function WeatherReport() {
+function WeatherReport({word}) {
   // const data = getWeatherDetails(10, 10)
   const description = sampleWeatherData.weather[0].description;
   const weatherCode = sampleWeatherData.weather[0].id;
@@ -26,27 +27,17 @@ function WeatherReport() {
 
   const latLonText = `Lat: ${sampleWeatherData.coord.lat} • Lon: ${sampleWeatherData.coord.lon}`;
   return (
-    <div>
-      <header className="AnyWeather-Header">{weatherCondition}</header>
-      <div className="AnyWeather-Description">
-        <div className="align-left">{description}</div>
-        <div className="align-right">{latLonText}</div>
-      </div>
-      <div>
-        <img
-          src={fewCloudsImage}
-          alt="black line icon of two clouds"
-          width="500"
-        />
-      </div>
-    </div>
-  );
+    <>
+    <h1>{word}</h1>
+    <InfoDisplay></InfoDisplay>
+    </>
+  )
 }
 
 function App() {
   return (
     <div className="AnyWeather-App">
-      <WeatherReport />
+      <WeatherReport word="Petrichor"/>
     </div>
   );
 }
